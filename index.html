@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Web App</title>
+    <title>Check List App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Web App</h1>
-    <button id="clickMeButton">Click Me!</button>
-    <p id="message"></p>
+    <div class="container">
+        <h1>Check List</h1>
+        <div class="item-content" id="1">
+            <p>1. ล้อ</p>
+            <div class="button-group">
+                <button class="btn" data-group="1">ชำรุด</button>
+                <button class="btn" data-group="1">ปกติ</button>
+            </div>
+        </div>
+        <div class="item-content" id="2">
+            <p>2. พวงมาลัยบังคับ</p>
+            <div class="button-group">
+                <button class="btn" data-group="2">ชำรุด</button>
+                <button class="btn" data-group="2">ปกติ</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
