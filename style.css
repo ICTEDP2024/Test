@@ -1,16 +1,88 @@
+/* ใช้ฟอนต์จาก Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
+    font-family: 'Roboto', Arial, sans-serif; /* ใช้ฟอนต์ Roboto */
+    background-color: #f0f0f0; /* สีพื้นหลังอ่อน */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ความสูงของหน้าจอ */
 }
 
-button {
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff; /* สีพื้นหลังของคอนเทนเนอร์ */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาเบา */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333; /* สีของหัวเรื่อง */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.item-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* จัดแนวปุ่มอยู่ด้านขวา */
+    padding: 10px;
+    border: 1px solid #ddd; /* เส้นขอบของรายการ */
+    border-radius: 5px;
+    background-color: #fafafa; /* สีพื้นหลังของรายการ */
+    margin-bottom: 20px; /* ระยะห่างระหว่างรายการ */
+}
+
+.item-content p {
+    font-size: 1.5rem;
+    color: #555; /* สีของข้อความรายการ */
+    margin: 0; /* ไม่มีระยะห่างด้านบนและล่าง */
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+}
+
+.btn {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #007bff; /* สีพื้นหลังของปุ่ม */
+    color: #fff; /* สีของข้อความในปุ่ม */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* การเปลี่ยนแปลงสีและขนาดปุ่ม */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาเบา */
 }
 
-p {
+.btn:hover {
+    background-color: #0056b3; /* เปลี่ยนสีพื้นหลังเมื่อเลื่อนเมาส์ */
+    transform: scale(1.05); /* ขยายขนาดปุ่มเล็กน้อย */
+}
+
+.btn:active {
+    background-color: #0056b3; /* สีพื้นหลังเมื่อกด */
+    color: #fff; /* สีข้อความเมื่อกด */
+    transform: scale(0.95); /* ขนาดปุ่มเล็กลงเมื่อกด */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* เงาลงเมื่อกด */
+}
+
+.btn.checked {
+    background-color: #ffffff; /* เปลี่ยนสีพื้นหลังเมื่อปุ่มถูกเช็ค */
+    color: #000000; /* เปลี่ยนสีข้อความเมื่อปุ่มถูกเช็ค */
+    position: relative;
+}
+
+.btn.checked::after {
+    position: absolute;
+    right: 10px;
     font-size: 18px;
-    color: blue;
+    color: #fff; /* สีของเครื่องหมายเช็ค */
 }
